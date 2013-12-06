@@ -2,6 +2,8 @@
 Awesome-mode Generator Plugin
 ===
 
+TODO: 日本語化
+
 This is an experimental node.js plugin for Photoshop's [Generator][1] extensibility layer. It currently implements three possibly-fun-and-or-humorous features: voice recognition, spoken feedback, and brush drawing via Leap Motion.
 
 
