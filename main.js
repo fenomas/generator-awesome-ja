@@ -98,15 +98,15 @@
     julius.on(
         'voice-command', function(cmd) {
             switch(cmd) {
-                case 'DUPLICATE LAYER':
+                case 'LAYER DUPLICATE':
                     say('Your layer is duplicated.');
                     sendJSX('app.activeDocument.activeLayer.duplicate();');
                     break;
-                case "NEW LAYER":
+                case "LAYER NEW":
                     say('Here is a new layer.');
                     sendJSX('app.activeDocument.artLayers.add();');
                     break;
-                case "DELETE LAYER":
+                case "LAYER DELETE":
                     say('Deleting your layer.');
                     sendJSX('app.activeDocument.activeLayer.remove();');
                     break;
@@ -134,7 +134,7 @@
                     speaking = ! speaking;
                     say('Voice mode activated.');
                     break;
-                case "OKAY PHOTO SHOP":
+                case "OK PHOTOSHOP":
                     say('Yes?');
                     break;
                 case "THANKYOU":

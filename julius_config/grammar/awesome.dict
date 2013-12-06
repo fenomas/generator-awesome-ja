@@ -1,20 +1,16 @@
-0	[<s>]	sil
-1	[</s>]	sil
-2	[OKAY]	ow k ey
-3	[PHOTO]	f ow t ow
-4	[SHOP]	sh aa p
-5	[THANKYOU]	th ae ng k y uw
-6	[DELETE]	d ax l iy t
-6	[DUPLICATE]	d uw p l ax k ey t
-6	[NEW]	n y uw
-7	[LAYER]	l ey er
-8	[ZOOM]	z uw m
-9	[IN]	ih n
-9	[OUT]	aw t
-10	[RANDOM]	r ae n d ah m
-11	[COLOR]	k ah l er
-12	[UNDO]	ah n d uw
-12	[CLOUDS]	k l aw d z
-12	[ENHANCE]	ix n hh ae n s
-13	[VOICE]	v oy s
-14	[MODE]	m ow d
+0	[<s>]	silB
+1	[</s>]	silE
+2	[OKAY]	o i
+3	[PHOTO]	f o t o
+4	[SHOP]	sh o
+5	[THANKYOU]	s a N ky u
+6	[LAYER]	r e y a:
+7	[DELETE]	s a k u j o
+7	[DUPLICATE]	k o p i:
+7	[NEW]	sh i N k i
+8	[RANDOM]	r a N d a m u
+9	[COLOR]	k a r a:
+10	[CLOUDS]	k u m o
+10	[ENHANCE]	e N h a N s u
+11	[VOICE]	b o i s u
+12	[MODE]	m o: d o

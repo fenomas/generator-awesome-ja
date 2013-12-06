@@ -2,8 +2,7 @@
 -dfa grammar/awesome.dfa
 -v grammar/awesome.dict
 
--h voxforge/acoustic_model_files/hmmdefs
--hlist voxforge/acoustic_model_files/tiedlist
+-h ja_models/phone_m/hmmdefs_monof_mix16_gid.gz
 
 
 -input mic
