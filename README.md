@@ -1,56 +1,52 @@
 
-Awesome-mode Generator Plugin
+Awesome-mode Generator プラグイン
 ===
 
-TODO: 日本語化
+Awesome-modeとは、Photoshopが最近対応した[Generator][1]というプラグイン仕組みの実験的なプラグインです。機能は現在で３つ：音声コマンド認識、音声フィードバック、そしてLeap Motionを使った空中描き。
 
-This is an experimental node.js plugin for Photoshop's [Generator][1] extensibility layer. It currently implements three possibly-fun-and-or-humorous features: voice recognition, spoken feedback, and brush drawing via Leap Motion.
+#### デモ:
 
-#### Demo:
-
-[![Video demo of plugin](http://andyhall.github.io/generator-awesome/images/generator-demo.png)](https://www.youtube.com/watch?v=_B9gF-iRhiU)
+[![プラグインのデモ・ビデオ](http://andyhall.github.io/generator-awesome/images/generator-demo.png)](https://www.youtube.com/watch?v=_B9gF-iRhiU)
 
 #### Notes:
-* This plugin is not meant for real-world use! It demonstrates some random things that can be done with Generator and might perhaps inspire some more useful development.
-* At the moment this has only been tested on a few machines, and not at all on Windows. Issue reports and pull requests are welcome!
-* Code is in demo state right now, there is some architectural weirdness to be cleaned up.
+* 本プラグインは応用的ではありません！Generatorを使えば色んなことを出来るよ、と伝えるためのデモです。
+* 現在では少数の環境でしかテストしていません。（Windows上はまだ未確認）　IssueやPull requestは歓迎です。
 
-## Installation
+## インストール方法
 
- 1. Install [npm][2] if you haven’t already.
- 2. Clone or download the [generator-core][3] repository
- 3. In a terminal, from `generator-core` folder, run:  `npm install`
- 4. Clone or download [this][4] repository, and from inside the folder run `npm install`
- 5. Install [julius][5]. The easiest way is probably to use [macports][6] and run the command `sudo port install julius`, but it can also be built from source, or perhaps run from binaries.  
-> If you have trouble installing julius on Mac, installing portaudio may fix the problem. Try doing `sudo port install portaudio` and then installing julius again.
+ 1. 必要であれば [npm][2] をインストールします。
+ 2. [generator-core][3] のレポジトリをダウンロードまたはクローンします。
+ 3. ターミナルで`generator-core`フォルダに移動して、`npm install`を実行します。
+ 4. [本レポジトリ][4]をダウンロードまたはクローンして、当フォルダ内から`npm install`を実行します。
+ 5. 音声ライブラリ[Julius][5]をインストールします。[Macports][6]を利用すれば`sudo port install julius`ですが、ソースからビルド、バイナリからでもインストールできるようです。 
+> Mac上でJuliusのインストールがうまく行かなかったら、portaudioをインストールする直るらしいです。`sudo port install portaudio`を実行してから再度試してください。
 
-## Using the plugin
+## プラグインの起動方法
 
-1. Start Photoshop and open a new file.
-2. Run the command: `node path/to/generator-core –f path/to/awesome.generate`  
-> If you get an error like "connection refused", open **Preferences > Plugins** and make sure Generator and Remote connections are enabled, and the password field is set to the default value 'password'.
-3. Wait for the plugin to initialize, and then select **File > Generate > Awesome mode**
-4. If julius is installed then voice commands should now be recognized, and if you have a Leap Motion device then it should be detected. 
+1. Photoshopを起動して新規ファイルを開きます。
+2. ターミナルで`node path/to/generator-core –f path/to/awesome.generate`を実行します。（`path/to/`を、上記のフォルダへのパスを入れ替えます。）  
+> "Connection refused"のようなエラーが表示されたら、Photoshopの **環境設定 > プラグイン** でGeneratorとRemote connectionsを有効に設定し、パスワードを'password'を設定してください。
+3. プラグインの起動が終わったら、メニューから**ファイル > Generate > Awesome mode**を選択します。
+4. Juliusのインストール済みであれば、音声コマンドはもう使えます。Leap MotionデバイスがPCに繋いでれば、認識されます。
 
-### Voice commands
+### 音声コマンド
 
-To use voice commands, preface each command with `Okay Photoshop`. You can also chain together commands with `Thank you`. That is: `Okay Photoshop... [command].. Thank you.. [command]..`
+音声コマンドを使うには、コマンド前に`おい フォトショ`と言います。コマンドの後に`サンキュ`を言うと次のコマンドも認識されます。つまり、`おいフォトショ... [command]... サンキュ... [command]... `のように使えます。
 
-Recognized commands:
+対応されるコマンド：
 
-* [New / Duplicate / Delete] Layer
-* Random color
-* Clouds
-* Undo
-* Voice mode
+* レイヤー  [新規 / コピー / 削除]
+* ランダム　カラー
+* 雲
+* ボイスモード
 
-### Voice mode
+### ボイスモード
 
-When enabled, the plugin responds to voice commands via the `say` utility. Enable it by saying `Okay Photoshop.. Voice mode`.
+有効にしますと、音声コマンドに対してフォトショップが声で答えます。音声コマンド`おいフォトショ.. ボイスモード`に対して、ボイスモードの設定が切り替えます。
 
-### Leap motion
+### Leap Motion
 
-If you have a Leap motion device, connect it any time and point with one finger. If you hover on the near side of the device (the side towards you), the plugin will mark the hover position with guide lines. To draw, move your finger forward over the plane of the device. Performance is poor for this right now - finding a faster way to draw is on the todo list.
+[Leap Motion][7]デバイスをパソコンに繋ぐと自動的に認識されます。指一本をデバイスの前上に指すと、指の位置が画面にマークされます。デバイスの後上に指しますと描けます。現状では描くことがやや重いですので、パフォーマンスのより良い描き方は検討中です。
 
 
   [1]: https://github.com/adobe-photoshop/generator-core
@@ -59,4 +55,4 @@ If you have a Leap motion device, connect it any time and point with one finger.
   [4]: https://github.com/andyhall/generator-awesome
   [5]: http://julius.sourceforge.jp/
   [6]: http://www.macports.org/
- 
+  [7]: http://www.leapmotion.com
