@@ -1,0 +1,1 @@
+mkdfa.pl grammar/awesome

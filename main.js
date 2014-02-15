@@ -11,7 +11,8 @@
     
     var PLUGIN_ID = require("./package.json").name,
         MENU_ID = "andy-generator-test",
-        MENU_LABEL = "Awesome mode";
+//        MENU_LABEL = "Awesome mode";
+        MENU_LABEL = "かっけー モード";
     
     var generator = null,
         config = null; 

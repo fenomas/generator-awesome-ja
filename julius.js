@@ -161,6 +161,7 @@
     
     // not sure if this is the usual way to expose event registration, but it works..
     function on(str,fcn) {
+        // hello
         emitter.on( str, fcn );
     }
     
